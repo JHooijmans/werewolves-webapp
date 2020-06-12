@@ -1,11 +1,13 @@
+package nl.sogyo.weerwolven.domain;
+
 import java.util.ArrayList;
 
-public class Weerwolf extends Burger {
+public class Weerwolf extends Role {
 
 
-    public Weerwolf(String[] playerNames, int[] nrOfRoles, ArrayList<Object> gameState) {
+    public Weerwolf(String[] playerNames, int[] nrOfRoles, ArrayList<Role> gameState) {
         int counter = nrOfRoles[0] + nrOfRoles[1];
-        this.name = playerNames[counter];
+        this.name = playerNames[counter-1];
         this.alive = true;
         this.votes = 0;
 

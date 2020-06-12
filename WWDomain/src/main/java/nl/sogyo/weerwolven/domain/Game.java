@@ -1,3 +1,5 @@
+package nl.sogyo.weerwolven.domain;
+
 import java.util.*;
 import java.util.ArrayList;
 
@@ -5,26 +7,11 @@ import java.util.ArrayList;
 
 public class Game {
 
-    private ArrayList<Object> gameState;
+    protected ArrayList<Role> gameState = new ArrayList<Role>();
 
     public Game(String[] playerNames) {
         Random random = new Random();
         int nrOfPlayers = playerNames.length;
-
-        //ALL THIS IS UNNECESSARY IF YOU RANDOMISE THE CREATED OBJECT ARRAYLIST AFTERWARDS!
-//        int[] randomizedPlayerIndex = new int[nrOfPlayers];
-//        for (int i=0; i<nrOfPlayers; i++) {
-//            randomizedPlayerIndex[i] = i+1;
-//        }
-//
-//        //Fisher-Yates shuffle to randomize the playerindices
-//        for (int i = nrOfPlayers-1; i > 0; i--) {
-//            int j = random.nextInt(i+1);
-//
-//            int temp = randomizedPlayerIndex[i];
-//            randomizedPlayerIndex[i] = randomizedPlayerIndex[j];
-//            randomizedPlayerIndex[j] = temp;
-//        }
 
         //Fisher-Yates shuffle to randomize the playerNames order to avoid first name always being a Burger, for instance
         for (int i = nrOfPlayers-1; i > 0; i--) {
