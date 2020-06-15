@@ -3,15 +3,11 @@ package nl.sogyo.weerwolven.domain;
 
 import org.junit.*;
 import nl.sogyo.weerwolven.domain.*;
+import java.util.*;
 
 public class WeerwolvenTest {
 
     private String[] playerNames;
-
-    @Test
-    public void TestExample() {
-        Assert.assertTrue("Testing doesn't work!", true);
-    }
 
     @Before
     public void setup() { playerNames = new String[] {"Abel", "Bob", "Cynthia", "Dirk", "Evelien", "Fanny"}; }
@@ -37,8 +33,19 @@ public class WeerwolvenTest {
     }
 
 //    @Test
+//    public void InputNamesAreAssignedToRoleObjects() {
+//        Game game = new Game(playerNames);
+//        playerNames.
+//        for (int i=0; i<game.gameState.size(); i++) {
+//            game.gameState.get(0).name
+//
+//        }
+//    }
+//
+//    @Test
 //    public void OrderOfNamesInputIsRandomized() {
 //        Game game = new Game(playerNames);
-//
+//        game.gameState.get(0).name
 //    }
+
 }
