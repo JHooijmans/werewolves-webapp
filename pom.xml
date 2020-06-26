@@ -4,15 +4,17 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-	<parent>
-		<groupId>nl.sogyo.weerwolven</groupId>
-		<artifactId>WWParent</artifactId>
-		<version>1.0-SNAPSHOT</version>
-	</parent>
-    <artifactId>WWDomain</artifactId>
-    <packaging>jar</packaging>
-	<name>Weerwolven WebApp Domain</name>
+    <groupId>nl.sogyo.weerwolven</groupId>
+    <artifactId>WWParent</artifactId>
+    <version>1.0-SNAPSHOT</version>
+	<packaging>pom</packaging>
+	<name>Weerwolven WebApp</name>
 	
+	<modules>
+        <module>WWDomain</module>
+        <module>WWAPI</module>
+    </modules>
+
     <dependencies>
         <dependency>
             <groupId>junit</groupId>
