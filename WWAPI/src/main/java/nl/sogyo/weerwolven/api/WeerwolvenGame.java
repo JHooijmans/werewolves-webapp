@@ -1,10 +1,11 @@
 package nl.sogyo.weerwolven.api;
 
-import nl.sogyo.weerwolven.domain;
+import nl.sogyo.weerwolven.domain.*;
 
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Set;
+import java.util.HashMap;
 
 import javax.websocket.CloseReason;
 import javax.websocket.OnClose;
@@ -18,7 +19,7 @@ import org.json.simple.JSONObject;
 @ServerEndpoint("/play")
 public class WeerwolvenGame {
 
-    HashMap<String, String> playernameList = new HashMap<String, String>();
+    HashMap<String, String> playerNameList = new HashMap<String, String>();
 
     @OnOpen
     public void onOpen(Session session) {
@@ -28,10 +29,15 @@ public class WeerwolvenGame {
     @OnMessage
     public void onMessage(String txt, Session session) throws IOException {
         System.out.println("Message received: " + txt);
-        JSONObject jMessage = new JSONObject(txt);
-        if (txt.contains(playername) { playernameList.put(session.getId(), jMessage.getString("playername")) };
-
-        //if message contains gameStart: create an array from the arraylist of names and send it to the domain
+//        JSONObject jMessage = new JSONObject(txt);
+//
+//        if (txt.contains("playername")) { playerNameList.put(session.getId(), jMessage.getString("playername")); };
+//
+//        if (jMessage.gameStart == true) {
+//            String[] playerNames = playerNameList.values().toArray(new String[playerNameList.size()]);
+//            System.out.println(playerNames);
+//            Game WWGame = new Game(playerNames);
+//        }
 
         for (Session sess : session.getOpenSessions()) {
             if (sess.isOpen()) {
