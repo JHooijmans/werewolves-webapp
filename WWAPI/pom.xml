@@ -3,9 +3,12 @@
 
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>nl.sogyo.weerwolven</groupId>
+	<parent>
+		<groupId>nl.sogyo.weerwolven</groupId>
+		<artifactId>WWParent</artifactId>
+		<version>1.0-SNAPSHOT</version>
+	</parent>
 	<artifactId>WWAPI</artifactId>
-    <version>1.0-SNAPSHOT</version>
 	<packaging>war</packaging>
     <name>Weerwolven WebApp API</name>
 	
